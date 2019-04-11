@@ -440,6 +440,10 @@ body {
     flex-direction: column;
   }
 
+  .header-main__bar-wrapper {
+    width: auto;
+  }
+
   .header-main__bar-user {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -494,6 +498,9 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
   }
 
   .header-main__products-item {
