@@ -1,0 +1,290 @@
+.header
+	&-top
+		background-color: $black-bg
+		+reg
+		color: $white
+		&__wrap
+			height: 56px
+			display: flex
+			align-items: center
+		&__logo
+			display: flex
+			align-items: center
+			width: 20%
+			&-text
+				color: $logo-text
+				font-size: 19px
+				+black
+				text-transform: uppercase
+				margin-left: 3px
+				margin-bottom: -3px
+		&__sub-bar
+			display: flex
+			width: 55%
+			&-item
+				margin-right: 35px
+				font-size: 14px
+				&_green
+						color: $text-green
+		&__city
+			width: 25%
+			font-size: 14px
+			&_sublined
+				display: inline-block
+				height: 15px
+				border-bottom: 1px dashed
+
+	&-main
+		background: url("../../img/header/header-main_bg.jpg") center no-repeat
+		height: 700px
+
+		&__bar
+			display: flex
+			&-first-line
+					width: 100%
+					display: flex
+					align-items: center
+					padding-top: 21px
+					margin-bottom: 19px
+			&-conditions
+				display: flex
+				+bold
+				margin-right: 50px
+				&-element
+					border-right: 2px solid  $text-color
+					padding-right: 10px
+					padding-left: 10px
+					&:first-child
+						padding-left: 0	
+					&:last-child
+							border: none
+							padding-right: 0
+			&-phone
+				// margin-left: 0.5%
+				display: flex
+				align-items: center
+				justify-content: space-between
+				&-number
+					font-size: 21px
+					+bold
+				&-free
+					font-size: 12px
+					+reg
+				&-button
+					margin-left: 16px
+			&-second-line
+				display: flex
+			&-input
+				&-button
+					height: 37px
+					width: 5%
+					border-radius: 0 2px 2px 0
+					border: none
+					background: $white url("../../img/header/header-main_search_icon.png") center no-repeat
+			&-user
+				margin-left: 26px
+				width: 20%
+				background-color: $black-bg
+				color: $white
+				font-size: 12px
+				+reg-thin
+				padding-top: 5px
+				padding-left: 20px
+				padding-right: 5px
+				padding-bottom: 5px
+				&-relative-line
+					display: none
+				&-first-line
+					display: flex
+					align-items: center
+					// justify-content: center
+					padding-bottom: 17px
+					border-bottom: 1px solid  $brown-line-color
+					width: 90%
+				&-first-line img
+					width: 40px
+					height: 40px
+				&-panel
+					display: flex
+					flex-direction: column
+					justify-content: space-around
+					height: 40px
+					margin-left: 5px
+					&-name
+						font-size: 14px
+				&-exit-btn
+					color: $button-orange-darker
+
+				&-second-line
+					margin-top: 12px
+					font-size: 12px
+				&-second-line span
+					border-bottom: 1px solid  $white
+
+		&__products
+			text-align: center
+			&-items
+				margin-top: 224px
+				display: flex
+				justify-content: space-between
+			&-item
+				background-color: $product-item-bg
+				width: 238px
+				&-img
+					width: 238px
+				&-title
+					text-align: center
+					padding: 15px 10px
+					color: $white
+					font-size: 18px
+					+reg-thin
+				&-title span
+					display: inline-block
+					border-bottom: 1px solid  $white
+					height: 20px
+					margin-top: -3px
+			&-button
+				margin-top: 50px
+
+@media (max-width: 750px)
+	.header
+		&-main
+			&__bar
+				&-wrapper
+					width: 70%
+				&-conditions
+					display: none
+				&-phone
+					width: 100%
+				&-user
+					width: 23%
+				&-input
+					&-button
+						width: 7%
+			&__products
+				&-items
+					margin-top: 55px
+					margin-left: auto
+					margin-right: auto
+					flex-wrap: wrap
+					width: 67%
+				&-item
+					margin-bottom: 20px
+					img
+						height: 140px
+						width: 240px
+						object-fit: cover
+
+
+@media (max-width: 480px)
+	.header
+		&-top
+			&__sub-bar
+				margin-left: 100px	
+				width: 20%	
+				&-item_green
+					display: none
+			&__city
+				width: 50%
+		&-main
+			&__bar
+				flex-direction: column
+				&-user
+					order: -1
+					width: 84%
+					&-second-line
+						padding-bottom: 13px
+				&-conditions
+					display: none
+				&-first-line
+					margin-left: auto
+					margin-right: auto
+					width: 90%
+					// justify-content: space-between
+				&-phone
+					width: 100%
+					justify-content: space-between
+				&-second-line
+					margin-left: auto
+					margin-right: auto
+					width: 90%
+				&-input
+					text-align: center
+					font-size: 16px
+					&-button
+						width: 15%
+						background-position: left center
+			&__products
+				&-items
+					height: 310px
+					align-items: center
+					margin-top: 50px
+					flex-direction: column
+				&-item
+					width: 90%
+					display: flex
+					img
+						width: 120px
+						height: 70px
+						object-fit: cover
+					&-title
+						display: flex
+						align-items: center
+						background-color: $product-item-bg
+						padding-left: 19px
+						+reg-thin
+				&-button
+					width: 90%
+					padding: 8px 48px
+					font-size: 18px
+					+reg
+
+
+
+
+@media (max-width: 320px)
+	.header
+		&-top
+			&__wrap
+				justify-content: space-between
+			&__city
+				display: none
+		&-main
+			height: 900px
+			&__bar
+				&-user
+					width: 92%
+					margin-left: 0
+					&-relative-line
+						display: block
+						width: 90%
+						padding-top: 13px
+						padding-bottom: 13px
+						border-bottom: 1px solid  $brown-line-color
+					&-first-line
+						margin-top: 13px
+				&-first-line
+					width: 100%
+				&-phone
+					width: 100%
+					&-button
+						margin-left: 0
+						padding: 6px 9px
+				&-second-line
+					margin-left: 0
+					width: 100%
+				&-input
+					width: 100%
+					&-button
+					 width: 20%
+					 background-position: center center
+			&__products
+				&-item
+					&-title
+						span
+							// display: inline-block
+							height: auto
+							// vertical-align: middle
+							text-align: left
+							border-bottom: none
+							text-decoration: underline
