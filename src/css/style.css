@@ -180,7 +180,7 @@ body {
 }
 
 .header-main {
-  background: url("../../img/header/header-main_bg.jpg") center no-repeat;
+  background: url("../img/header/header-main_bg.jpg") center no-repeat;
   height: 700px;
 }
 
@@ -265,7 +265,7 @@ body {
   width: 5%;
   border-radius: 0 2px 2px 0;
   border: none;
-  background: #fff url("../../img/header/header-main_search_icon.png") center no-repeat;
+  background: #fff url("../img/header/header-main_search_icon.png") center no-repeat;
 }
 
 .header-main__bar-user {
